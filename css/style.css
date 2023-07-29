@@ -1,0 +1,720 @@
+:root{
+    --main-color:#f25454;
+    --main-header-font-family: "Poppins", sans-serif;
+    --main-text-font-family: "Open Sans", sans-serif;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: all 0.15s ease;
+    font-family: var(--main-header-font-family);
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+    color: var(--main-color);
+}
+.navbar-social i{
+    color: white;
+    font-size: 14px;
+    transition: all 0.15s ease;
+}
+.navbar-social i:hover{
+    color: var(--main-color);
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+    color: var(--main-color);
+}
+.header-background{
+    color: white;
+    text-align: center;
+}
+.header-background h1{
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: var(--main-header-font-family);
+}
+.header-background1{
+    background-image: url(../images/slideshow-1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.header-background2{
+    background-image: url(../images/slideshow-2.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.header-background3{
+    background-image: url(../images/slideshow-3.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+header .carousel-control-next, .carousel-control-prev{
+    width: 50px;
+    height: 50px;
+    left: 0;
+    font-size: 20px;
+    border: 1px solid white;
+    border-left: 0;
+    opacity: 1;
+}
+header .carousel-control-prev{
+    top: 40%;
+    border-top-right-radius: 2px;
+}
+header .carousel-control-next{
+    top: 48.8%;
+    border-bottom-right-radius: 2px;
+}
+header .white-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: all 0.3s;
+}
+header .carousel-control-prev:hover .white-background , header .carousel-control-next:hover .white-background
+{
+    animation-name: generate-background ;
+    width: 100%;
+}
+header .carousel-control-prev:hover , header .carousel-control-next:hover {
+    color: #f25454;
+}
+@keyframes generate-background {
+    0%{width: 0;}
+    100%{width: 100%;}
+}
+header .setting-icon>i {
+    top: 20%;
+    left: 0px;
+    width: 39px;
+    height:39px;
+    background-color: #1f2528;
+    border-radius: 0px 2px 2px 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;   
+    z-index: 5; 
+    transition: all 0.15s;
+}
+header .setting-icon .setting-info{
+    position: fixed;
+    padding: 15px 12px 15px 15px;
+    height: 200px;
+    width: 255px;
+    top: 115px;
+    left: 0;
+    background-color: white;
+    visibility:hidden ;
+    z-index: 5;
+    box-shadow: 0 1px 2px rgb(35 35 35 / 10%), transparent 0 0 0, transparent 0 0 0;
+    transition: all 0.15s ease;
+}
+header .setting-icon .setting-info h3{
+    font-size: 16px;
+    line-height: 16px;
+    color: #333;
+    font-weight: bold;
+}
+header .setting-icon .setting-info li{
+    list-style-type: none;
+}
+header .setting-icon .setting-info li a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 14px;
+    transition: .3s;
+}
+header .setting-icon .setting-info li a i{
+    margin-left: 10px;
+}
+header .setting-icon .setting-info ul {
+    padding-left: 0;
+}
+header .setting-icon .setting-info ul .special-li{
+    font-weight: bold;
+    color: #1f2528;
+}
+header .setting-icon .setting-info span{
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+    border-radius: 2px;
+    float: left;
+}
+header .setting-icon .setting-info .red{
+    background: #f25454;
+}
+header .setting-icon .setting-info .blue{
+    background: #4e9cb5;
+}
+header .setting-icon .setting-info .green{
+    background: #24bca4;
+}
+header .setting-icon .setting-info .turquoise{
+    background: #46cad7;
+}
+header .setting-icon .setting-info .purple{
+    background: #c86f98;
+}
+header .setting-icon .setting-info .orange{
+    background: #ee8f67;
+}
+header .setting-icon .setting-info .yellow{
+    background: #e4d20c;
+}
+header .setting-icon .setting-info .grey{
+    background: #6b798f;
+}
+header .setting-icon:hover >i{
+    left: 255px;
+    background-color: #444444;
+}
+header .setting-icon:hover .setting-info{
+visibility: visible;
+}
+header .setting-info li a:hover{
+    color: #444;
+}
+header .carousel-inner .mouse{
+    width: 26px;
+    height: 40px;
+    bottom: 5%;
+    border: 1px solid white;
+    transition: .3s;
+}
+header .carousel-inner .mouse:hover{
+    border-color: var(--main-color);
+}
+header .carousel-inner .mouse span{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: change 1.7s infinite ease;
+}
+header .carousel-inner .mouse:hover span{
+    background-color: var(--main-color);
+}
+@keyframes change {
+    0%{
+        top: 6px;
+    }
+    80%{
+        top: 20px;
+    }
+    100%{
+        top: 23px;
+        opacity: 0;
+    }
+}
+.title h2 {
+    font-size: 4rem;
+    letter-spacing: 20px;
+    color: #edededc8;
+    font-weight: 900;
+    font-family: var(--main-header-font-family);
+}
+.title h3 {
+    font-size: 38px;
+    line-height: 38px;
+    font-weight: 700;
+    top: 30px;
+    color: #282828;
+    font-family: var(--main-header-font-family);
+}
+.title h3::after{
+    content: "";
+    width: 35px;
+    height: 0.6px;
+    background-color: #282828;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+.title:hover h3::after{
+width: 60px;
+}
+.title+p{
+    font-size: 18px;
+    color: #999;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    font-family: var(--main-text-font-family);
+}
+
+.about .about-left{
+    font-size: 14px;
+    color: #666;
+    line-height: 1.75em;
+    font-family: var(--main-text-font-family);
+}
+.skill1-info{
+    width: 80%;
+}
+.skill1-info p{
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: var(--main-text-font-family);
+}
+.skills .skill-percent{
+    height: 4px;
+    background-color: #eee;
+    border-radius: 2px;
+}
+.skills .skill-percent1{
+    width: 80%;
+    height: 4px;
+    background-color: var(--main-color);
+    box-shadow:  0 -1px 0 rgb(0 0 0 / 15%);
+    border-radius: 2px;
+    animation-name: growing1;
+    animation-duration: 2s;
+    transition: width .6s ease;
+}
+@keyframes growing1 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+.skill2-info{
+    width: 95%;
+}
+.skills .skill-percent2{
+    width: 95%;
+    animation-name: growing2;
+    animation-duration: 2s;
+    transition: width .6s ease;
+}
+@keyframes growing2 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+.skill3-info{
+    width: 85%;
+}
+.skills .skill-percent3{
+    width: 85%;
+    animation-name: growing4;
+    animation-duration: 2s;
+    transition: width .6s ease;
+}
+@keyframes growing3 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+.skill4-info{
+    width: 85%;
+}
+.skills .skill-percent4{
+    width: 70%;
+    animation-name: growing4;
+    animation-duration: 2s;
+    transition: width .6s ease;
+}
+@keyframes growing4 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+.team .team-member h5{
+    font-size: 16px;
+    font-weight: 600;
+    color: #282828;
+    margin:25px 0 2px 0;
+    font-family: var(--main-header-font-family);
+    transition: all 0.3s;
+    }
+    .team .team-member p{
+        color: #666;
+        font-size: 14px;
+        font-family: var(--main-text-font-family);
+    }
+    .image-layer img{
+        border-radius: 3px;
+        transition: all 0.3s;
+    }
+    .image-layer{
+        overflow: hidden;
+        border-radius: 3px;
+    }
+    .team-member .image-social{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:rgba(242, 84, 84, 0.85);
+        margin: 0 auto;
+        transform: translateY(10px);
+        transition: all 0.3s;
+        opacity: 0;
+    }
+    .image-social .social-media{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+    }
+    .team-member:hover .image-social{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    .team-member:hover img {
+        transform: scale(1.1,1.1);
+    }
+    .team-member:hover h5{
+        color: var(--main-color);
+    }
+    .info h3{
+        font-size: 32px;
+        line-height: 50px;
+        font-weight: 400;
+        color: #282828;
+        font-family: var(--main-header-font-family);
+    }
+    .info a{
+        background-color: var(--main-color);
+        padding:  18px 35px;
+        color: white;
+        font-size: 14px;
+        border-radius: 3px;
+        line-height: 1;
+        font-weight: 700;
+        transition: all 0.1s ease-in;
+        font-family: var(--main-text-font-family);
+    }
+    .info a:hover{
+        background-color: rgba(242, 84, 84, 0.85);
+        border-color: rgba(242, 84, 84, 0.85) ;
+        color: white;
+    }
+    .services .title h2 , .reviews .title h2{
+        font-size: 6rem;
+        font-weight: 700;
+        font-family: var(--main-header-font-family);
+    }
+    .services .title h3 ,.reviews .title h3{
+        top: 60px;
+        font-family: var(--main-header-font-family);
+    }
+    .service-icon {
+        font-size: 30px;    
+        margin-right: 20px;
+        color: #f25454;
+    }
+    .service-info h3{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color:#282828 ;
+        line-height: 32px;
+        transition: all 0.3s;
+        font-family: var(--main-header-font-family);
+    }
+    .service-info p{
+        font-size: 14px;
+        color: #666;
+        line-height: 1.75em;
+        font-family: var(--main-text-font-family);
+    }
+    .service1:hover h3{
+        color: var(--main-color);
+    }
+    .services {
+        background-color: #fafafa;
+    }
+    .reviews .carousel-item p{
+        font-size: 25px;
+        line-height: 1.5em;
+        color: #666;
+        margin: 30px 0;
+        font-family: var(--main-text-font-family);
+    }
+    .reviews .carousel{
+        width: 55%;
+        margin: auto;
+    }
+    .reviews .carousel-item h3{
+        font-size: 16px;
+        line-height: 16px;
+        margin: 0;
+        color: #282828;
+        font-weight: 600;
+        font-family: var(--main-header-font-family);
+    }
+    .reviews .carousel-item span{
+        font-size: 14px;
+        color: #666;
+        line-height: 1;
+        margin-top: 7px;
+        font-family: var(--main-text-font-family);
+    }
+    .carousel-indicators [data-bs-target]{
+       width: 16%;
+        height: 100px;
+        border-radius: 50%;
+        text-indent: 0;
+        background-color: transparent;
+    }
+    .reviews .carousel-indicators{
+        bottom: 65%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .reviews .carousel-indicators .active{
+        width: 20%;
+    }
+    .reviews .carousel-indicators img{
+        transition: all 0.3s;
+    }
+    .contact{
+        background-color: #fafafa;
+    }
+    .contact-info .contact-icon {
+        font-size: 40px;
+        margin-right: 25px;
+        text-align: center;
+        line-height: 40px;
+        color: #f25454;
+    }
+    .contact-info .contact-details h4{
+        font-size: 18px;
+        color: #282828;
+        font-weight: 600;
+        margin: 0;
+        font-family: var(--main-header-font-family);
+        transition: all 0.3s;
+    }
+    .contact-info .contact-details p{
+        font-size: 14px;
+        color: #666;
+        margin-top: 5px;
+        transition: all 0.3s;
+        font-family: var(--main-text-font-family);
+    }
+    .contact-info .contact-details a{
+        text-decoration: none;
+    }
+    .contact-info .contact-details a p{
+        color: #444444;
+    }
+    .contact .contact-info{
+        border-bottom: 1px solid #eee;
+    }
+    .contact-info .contact-details a:hover p{
+        color: var(--main-color);
+    }
+    .contact .contact-info:hover h4{
+    color: var(--main-color);
+    }
+    .contact .contact-left>h3{
+        color: #282828;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 32px;
+        margin: 0 0 30px 0;
+        font-family: var(--main-header-font-family);
+    }
+    .contact-right button{
+        background-color: var(--main-color);
+        color: white;
+        font-weight: 700;
+        border-radius: 3px;
+        padding: 15px 30px;
+        font-size: 14px;
+        font-family: var(--main-text-font-family);
+        transition: all 0.1s ease-in;
+    }
+    .contact-right button:hover{
+        background-color: rgba(242, 84, 84, 0.85);
+        border-color: rgba(242, 84, 84, 0.85) ;
+        color: white;
+    }
+    .contact-right input{
+        border-radius: 3px;
+        border: 2px solid #eee;
+        padding: 10px 14px;
+    }
+    .contact-right textarea{
+        border-radius: 3px;
+        border: 2px solid #eee;
+        padding: 10px 14px;
+    }
+    .our-details{
+        background: #222;
+        background-image: url("../images/dotted-map.png");
+        background-size: contain;
+        position: relative;
+    }
+    .our-details .backToTop{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(242, 84, 84, 0.5);
+        left: 0;
+        right: 0;
+        top: -25px;
+        font-size: 18px;
+        line-height: 46px;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+    .our-details .backToTop:hover{
+        background-color: var(--main-color);
+    }
+    .our-details .container .details-icons{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .more-details ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .more-details a {
+        text-decoration: none;
+        color: #b0b0b0;
+        font-size: 14px;
+        line-height: 1.75em;
+        font-family: var(--main-header-font-family);
+        transition: .3s;
+    }
+    .more-details a:hover{
+        color: var(--main-color);
+    }
+    .more-details p{
+        color: #b0b0b0;
+        font-size: 14px;
+        line-height: 1.75em;
+        font-family: var(--main-header-font-family);
+    }
+    .tags a{
+        border: 1px solid #b0b0b0 ;
+        font-size: 13px;
+        border-radius: 3px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        padding: 2px 10px;
+        float: left;
+        transition: all 0.3s;
+    }
+    .tags a:hover{
+        border-color: var(--main-color);
+    }
+    .clear-fix{
+        clear: both;
+    }
+    .more-details h5{
+        font-family: var(--main-header-font-family);
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 600;
+    }
+    footer{
+        background: #1a1a1a;
+        padding: 20px 0;
+        color: white;
+    }
+    footer .copyright{
+        text-align: right;
+        line-height: 16px;
+        letter-spacing: .5px;
+        color: #b0b0b0;
+        font-size: 14px;
+        font-family: var(--main-header-font-family);
+    }
+    footer .footer-social a{
+        color: white;
+        transition: all 0.3s;
+    }
+    footer .footer-social a:hover{
+        color: var(--main-color);
+    }
+    footer .copyright a{
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+    footer .copyright a:hover{
+        color: var(--main-color) ;
+    }
+    @media screen and (max-width:992px) {
+        .navbar-toggler{
+            border: 0;
+        }
+        nav .container
+        {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width:768px) {
+        .header-background h1{
+            font-size: 36px;
+        }
+        header .setting-icon>i{
+            display: none;
+        }
+        .about .container,
+        .services .container,
+        .reviews .container,
+        .contact .container,
+        .our-details .container,
+        .team .container {
+            max-width: 100%;
+        }
+        .info h3{
+            font-size: 24px;
+        }
+        .info a{
+            padding: 12px 20px;
+        }
+        .contact .contact-left>h3{
+            font-size: 24px;
+        }
+        .contact-right button{
+            padding: 12px 20px;
+        }
+        .reviews .carousel{
+            width: 80%;
+        }
+        header .carousel-inner .mouse{
+            display: none;
+        }
+    }
+
+    
